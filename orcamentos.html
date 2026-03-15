@@ -1,0 +1,41 @@
+
+<!DOCTYPE html><html><head><meta charset="UTF-8"><link rel="stylesheet" href="estilo.css"></head>
+<body>
+<div class="sidebar">
+<h3>Gráfica ERP</h3>
+<a href="index.html">Dashboard</a>
+<a href="orcamentos.html">Orçamentos</a>
+<a href="kanban.html">Produção</a>
+<a href="receber.html">Contas Receber</a>
+<a href="pagar.html">Contas Pagar</a>
+</div>
+
+<div class="content">
+<h2>Novo Orçamento</h2>
+
+<div class="card">
+Cliente <input><br><br>
+
+Rolo
+<select id="rolo">
+<option>100</option>
+<option>127</option>
+<option>150</option>
+<option>180</option>
+</select>
+
+<button onclick="addItem()">+ Adicionar Item</button>
+
+<table id="itens">
+<thead>
+<tr><th>Produto</th><th>Qtd</th><th>Larg</th><th>Alt</th><th>Preço</th><th>Total</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<p id="info"></p>
+<p id="roloinfo"></p>
+
+</div>
+<script src="script.js"></script>
+</div></body></html>
