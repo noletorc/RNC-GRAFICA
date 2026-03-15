@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>ERP Gráfica</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>ERP GRÁFICA</h1>
+
+<nav>
+<button onclick="abrirPagina('orcamentos')">Orçamentos</button>
+<button onclick="abrirPagina('kanban')">Produção</button>
+<button onclick="abrirPagina('simulador')">Simulador Lona</button>
+<button onclick="abrirPagina('chapa')">Chapas</button>
+</nav>
+</header>
+
+
+<section id="orcamentos" class="pagina">
+
+<h2>🧾 Orçamentos</h2>
+
+<label>Cliente</label>
+<input id="cliente">
+
+<label>Largura do rolo</label>
+
+<select id="rolo">
+<option>100</option>
+<option>127</option>
+<option>150</option>
+<option>180</option>
+</select>
+
+<button onclick="addItem()">Adicionar Item</button>
+
+<table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Qtd</th>
+<th>Larg</th>
+<th>Alt</th>
+<th>Preço</th>
+<th>Total</th>
+</tr>
+</thead>
+
+<tbody id="tabelaItens"></tbody>
+
+</table>
+
+<div id="total"></div>
+
+</section>
+
+
+<section id="kanban" class="pagina">
+
+<h2>🎯 Produção</h2>
+
+<div class="kanban">
+
+<div class="coluna" id="arte">
+<h3>Arte</h3>
+</div>
+
+<div class="coluna" id="producao">
+<h3>Produção</h3>
+</div>
+
+<div class="coluna" id="acabamento">
+<h3>Acabamento</h3>
+</div>
+
+<div class="coluna" id="receber">
+<h3>A Receber</h3>
+</div>
+
+<div class="coluna" id="concluido">
+<h3>Concluído</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="simulador" class="pagina">
+
+<h2>📏 Simulador de Lona</h2>
+
+<label>Larg peça</label>
+<input id="largPeca">
+
+<label>Alt peça</label>
+<input id="altPeca">
+
+<button onclick="simularRolo()">Simular</button>
+
+<canvas id="canvasRolo" width="800" height="400"></canvas>
+
+</section>
+
+
+<section id="chapa" class="pagina">
+
+<h2>🪵 Aproveitamento de Chapa</h2>
+
+<label>Larg peça</label>
+<input id="largChapa">
+
+<label>Alt peça</label>
+<input id="altChapa">
+
+<label>Qtd</label>
+<input id="qtdChapa">
+
+<button onclick="calcularChapa()">Calcular</button>
+
+<canvas id="canvasChapa" width="800" height="400"></canvas>
+
+<div id="resultadoChapa"></div>
+
+</section>
+
+
+<script src="js/dados.js"></script>
+<script src="js/calculos.js"></script>
+<script src="js/kanban.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
