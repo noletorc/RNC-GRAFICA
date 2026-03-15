@@ -1,0 +1,181 @@
+
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<title>Produtos</title></head>
+<body><div class="container-fluid"><div class="row">
+
+<div class="col-lg-2 sidebar">
+<h4>Gráfica Rogério Noleto</h4>
+<a href="index.html">Dashboard</a>
+<a href="orcamentos.html">Orçamentos</a>
+<a href="produtos.html">Produtos</a>
+<a href="clientes.html">Clientes</a>
+<a href="kanban.html">Produção Kanban</a>
+<a href="financeiro_receber.html">Contas Receber</a>
+<a href="financeiro_pagar.html">Contas Pagar</a>
+</div>
+
+<div class="col-lg-10 content">
+<h2>Produtos</h2>
+<div class="card-box">
+<table>
+<thead><tr><th>Produto</th><th>Tipo</th><th>Preço</th></tr></thead>
+<tbody id="prodTable"></tbody>
+</table>
+</div>
+</div></div></div>
+<script>
+const produtos=[
+  {
+    "name": "Caneca",
+    "type": "Unitário",
+    "price": 35
+  },
+  {
+    "name": "Bloco",
+    "type": "Unitário",
+    "price": 6
+  },
+  {
+    "name": "Troféu",
+    "type": "Unitário",
+    "price": 120
+  },
+  {
+    "name": "Medalhas",
+    "type": "Unitário",
+    "price": 8
+  },
+  {
+    "name": "Canetas",
+    "type": "Unitário",
+    "price": 4
+  },
+  {
+    "name": "Copos",
+    "type": "Unitário",
+    "price": 5
+  },
+  {
+    "name": "Gravação",
+    "type": "Unitário",
+    "price": 10
+  },
+  {
+    "name": "Tirante",
+    "type": "Unitário",
+    "price": 15
+  },
+  {
+    "name": "Crachás",
+    "type": "Unitário",
+    "price": 12
+  },
+  {
+    "name": "Impressão Konica",
+    "type": "Unitário",
+    "price": 1
+  },
+  {
+    "name": "Impressão UV",
+    "type": "Unitário",
+    "price": 3
+  },
+  {
+    "name": "Cardápio",
+    "type": "Unitário",
+    "price": 20
+  },
+  {
+    "name": "Pulseira tecido",
+    "type": "Unitário",
+    "price": 6
+  },
+  {
+    "name": "Pulseira nylon",
+    "type": "Unitário",
+    "price": 4
+  },
+  {
+    "name": "Chaveiro acrílico",
+    "type": "Unitário",
+    "price": 7
+  },
+  {
+    "name": "Chaveiro metal",
+    "type": "Unitário",
+    "price": 8
+  },
+  {
+    "name": "Impressão 3D",
+    "type": "Unitário",
+    "price": 30
+  },
+  {
+    "name": "Agendas",
+    "type": "Unitário",
+    "price": 45
+  },
+  {
+    "name": "Blocos de serviço",
+    "type": "Unitário",
+    "price": 8
+  },
+  {
+    "name": "Caixa MDF",
+    "type": "Unitário",
+    "price": 20
+  },
+  {
+    "name": "Corte MDF",
+    "type": "Unitário",
+    "price": 5
+  },
+  {
+    "name": "Sublimação",
+    "type": "Unitário",
+    "price": 10
+  },
+  {
+    "name": "Placa PIX",
+    "type": "Unitário",
+    "price": 15
+  },
+  {
+    "name": "Adesivo",
+    "type": "m2",
+    "price": 120
+  },
+  {
+    "name": "Banner",
+    "type": "m2",
+    "price": 120
+  },
+  {
+    "name": "Lona",
+    "type": "m2",
+    "price": 110
+  },
+  {
+    "name": "PVC",
+    "type": "m2",
+    "price": 180
+  },
+  {
+    "name": "Acrílico",
+    "type": "m2",
+    "price": 250
+  }
+];
+const t=document.getElementById('prodTable');
+produtos.forEach(p=>{
+let tr=document.createElement('tr');
+tr.innerHTML=`<td>${p.name}</td><td>${p.type}</td><td>${p.price}</td>`;
+t.appendChild(tr);
+})
+</script>
+</body></html>
